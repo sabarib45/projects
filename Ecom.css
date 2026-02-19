@@ -1,0 +1,680 @@
+/* Ecom.css */
+
+/* Reset / base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Containers */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+/* Header */
+/* Header Styles */
+
+header {
+  background-color: #2a295a;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.header-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Logo */
+
+.logo {
+  font-size: 45px;
+  font-weight: bold;
+  color: #fbfbfc;
+  text-decoration: none;
+}
+
+.logo:hover {
+  color: #1c1d1e;
+}
+
+/* Navigation links */
+
+nav {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+nav a {
+  color: #f31010;
+  font-size: 20px;
+  padding: 8px 12px;
+  border-radius: 20px;
+  transition: background-color 0.15s, color 0.15s;
+}
+
+nav a:hover {
+  background-color: #c59999;
+  color: #bfd1e3d3;
+}
+
+/* Sign out button */
+
+.signout-btn {
+  background-color: transparent;
+  border: 1px solid #888;
+  color: #555;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.15s, color 0.15s;
+}
+
+.signout-btn:hover {
+  background-color: #e0e0e0;
+  color: #333;
+}
+
+/* Cart badge */
+
+.cart-badge {
+  background-color: #e74c3c;
+  color: #fff;
+  font-size: 0.75rem;
+  padding: 2px 6px;
+  border-radius: 50%;
+  position: absolute;
+  top: -6px;
+  right: -10px;
+  line-height: 1;
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+  .header-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  nav {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+}
+
+/* Cart badge */
+.cart-badge {
+  background-color: #e74c3c;
+  color: white;
+  font-size: 0.75rem;
+  padding: 2px 6px;
+  border-radius: 50%;
+  position: absolute;
+  top: -6px;
+  right: -10px;
+}
+
+/* Footer */
+/* Footer Styles */
+
+footer {
+  background-color: #162649;
+  border-top: 1px solid #ddd;
+  padding: 20px 0;
+  margin-top: 40px;
+  /* If you want it always at bottom when content is short: you may use a sticky footer strategy (see MDN grid or flex sticky footer) */  
+}
+
+.footer-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  font-size: 20px;
+  color: #eee9e9;
+}
+
+.footer-inner > div {
+  /* ensures children don't collapse */
+}
+
+.footer-links {
+  display: flex;
+  gap: 15px;
+}
+
+.footer-links a {
+  color: #fdfbfb;
+  text-decoration: none;
+  padding: 5px 8px;
+  border-radius: 4px;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.footer-links a:hover {
+  background-color: #f0f0f0;
+  color: #1a1919;
+}
+
+/* Optional: responsive tweaks */
+@media (max-width: 600px) {
+  .footer-inner {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-links {
+    margin-top: 10px;
+    flex-wrap: wrap;
+  }
+}
+
+
+/* Sidebar & layout */
+.grid {
+  display: flex;
+  gap: 20px;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 150px;
+  background-color: #ada8ce;
+  border: 3px solid #1b1b1b;
+  padding: 16px;
+  border-radius: 10px;
+}
+
+.sidebar h4 {
+  margin-bottom: 12px;
+  color: #4e166b;
+}
+
+.sidebar ul {
+  list-style: none;
+   color: #865c9b;
+}
+
+.sidebar li + li {
+  margin-top: 8px;
+   color: #af76cc;
+}
+
+.sidebar button {
+  background: none;
+  border: none;
+  color: #2c3e50;
+  cursor: pointer;
+  padding: 4px 0;
+}
+
+.sidebar button:hover {
+  color: #2980b9;
+}
+
+/* Product cards */
+/* Product Card Styles */
+
+.product-card {
+  background-color: #d2d2e6;
+  border: 3px solid #1e1d1d;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: box-shadow 0.25s ease, transform 0.2s ease;
+}
+
+.product-card:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  transform: translateY(-4px);
+}
+
+.product-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover img {
+  transform: scale(1.05);
+}
+
+.product-card h4 {
+  font-size: 1.1rem;
+  color: #2c3e50;
+  margin: 12px 16px 8px;
+  line-height: 1.3;
+  min-height: 3em; /* reserve space */
+}
+
+.product-card > div {
+  /* for the bottom price + button row */
+  margin: 0 16px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.product-card .add-btn {
+  background-color: #27ae60; /* a lively green accent */
+  color: #ffffff;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 4px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.2s;
+}
+
+.product-card .add-btn:hover:not(:disabled) {
+  background-color: #229954;
+  transform: scale(1.03);
+}
+
+.product-card .add-btn:disabled {
+  background-color: #b0b0b0;
+  cursor: not-allowed;
+}
+
+.product-card .price-box {
+  display: flex;
+  flex-direction: column;
+}
+
+.product-card .price-current {
+  font-weight: 700;
+  color: #e74c3c; /* red accent for emphasis */
+  font-size: 1.1rem;
+}
+
+.product-card .price-old {
+  font-size: 0.9rem;
+  color: #888888;
+  text-decoration: line-through;
+  margin-top: 4px;
+}
+
+/* If you want a “sold out” overlay or style, you could add: */
+
+.product-card .sold-out-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255,255,255,0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.3rem;
+  color: #e74c3c;
+  pointer-events: none;
+}
+
+/* Responsive tweak (if needed) */
+@media (max-width: 480px) {
+  .product-card img {
+    height: 140px;
+  }
+  .product-card h4 {
+    margin: 8px 12px 6px;
+  }
+  .product-card > div {
+    margin: 0 12px 12px;
+  }
+}
+
+
+/* Product details page */
+/* Product Details Page Styles */
+
+.product-details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin: 40px 0;
+}
+
+.product-details > div {
+  flex: 1 1 320px; /* allow to shrink / grow, but base width */
+}
+
+.product-details img {
+  width: 100%;
+  max-width: 500px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Info section styling */
+.product-details h2 {
+  font-size: 2rem;
+  margin-bottom: 16px;
+  color: #2c3e50;
+}
+
+.product-details p {
+  margin: 16px 0;
+  line-height: 1.6;
+  color: #555;
+  font-size: 1rem;
+}
+
+.product-details .price {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #e74c3c; /* accent color for price */
+  margin-bottom: 12px;
+}
+
+/* Rating / reviews */
+.product-details .rating {
+  margin-bottom: 12px;
+  color: #777;
+  font-size: 1rem;
+}
+
+/* Buttons row */
+.product-details .actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.product-details .add-btn {
+  background-color: #27ae60;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+.product-details .add-btn:hover:not(:disabled) {
+  background-color: #229954;
+  transform: scale(1.03);
+}
+
+.product-details .add-btn:disabled {
+  background-color: #b0b0b0;
+  cursor: not-allowed;
+}
+
+.product-details .view-btn {
+  background-color: #2980b9;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.product-details .view-btn:hover {
+  background-color: #2374a6;
+}
+
+/* Strike-through original price if needed */
+.product-details .original-price {
+  text-decoration: line-through;
+  color: #888;
+  margin-left: 12px;
+  font-size: 1.1rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .product-details {
+    flex-direction: column;
+    gap: 24px;
+  }
+  
+  .product-details img {
+    max-width: 100%;
+  }
+}
+
+
+/* Cart page */
+/* Cart Page Styles */
+
+/* Main heading */
+.cart-page h2 {
+  font-size: 1.8rem;
+  margin-bottom: 24px;
+  color: #2c3e50;
+}
+
+/* When cart is empty */
+.cart-page .empty-msg {
+  font-size: 1.1rem;
+  color: #555;
+  margin-top: 20px;
+}
+
+/* Grid layout for cart & summary */
+.cart-grid {
+  display: flex;
+  gap: 30px;
+  margin-top: 20px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+/* Cart items list area */
+.cart-item {
+  display: flex;
+  gap: 20px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 16px;
+  align-items: center;
+  transition: box-shadow 0.2s;
+}
+
+.cart-item:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.cart-item img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.cart-item-details {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.cart-item-details .name {
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.cart-item-details .price-qty {
+  color: #555;
+}
+
+.cart-item-details .controls {
+  margin-top: 8px;
+}
+
+.cart-item-details .controls button {
+  background-color: #27ae60;
+  color: #fff;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.15s;
+}
+
+.cart-item-details .controls button:hover {
+  background-color: #229954;
+  transform: scale(1.05);
+}
+
+.cart-item-details .controls button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* Summary box */
+.cart-summary {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  min-width: 260px;
+  flex: 0 0 auto;
+}
+
+.cart-summary > div {
+  margin-bottom: 16px;
+}
+
+.cart-summary .subtotal {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #e74c3c;
+}
+
+.checkout-btn, .clear-btn {
+  width: 100%;
+  padding: 10px 0;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.checkout-btn {
+  background-color: #e67e22;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.checkout-btn:hover {
+  background-color: #cf711f;
+}
+
+.clear-btn {
+  background-color: #c0392b;
+  color: #fff;
+}
+
+.clear-btn:hover {
+  background-color: #a93226;
+}
+
+/* Responsive / mobile adjustments */
+@media (max-width: 768px) {
+  .cart-grid {
+    flex-direction: column;
+  }
+
+  .cart-summary {
+    width: 100%;
+  }
+}
+
+
+/* Forms and signin/signup */
+.form-box {
+  max-width: 400px;
+  margin: 0 auto;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 20px;
+}
+
+.form-box h2 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.form-box .form input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.form-box .form button {
+  width: 100%;
+  background-color: #2980b9;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.form-box .form button:hover {
+  background-color: #1f6391;
+}
+
+/* Profile, About */
+.profile, .about-box {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 20px;
+}
+
+/* Utility */
+.mt-1 { margin-top: 8px; }
+.mt-2 { margin-top: 16px; }
+.mt-3 { margin-top: 24px; }
+
+.text-center {
+  text-align: center;
+}
